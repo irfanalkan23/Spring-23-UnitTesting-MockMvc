@@ -69,6 +69,8 @@ class StudentControllerTest {
                 .get("/service/student")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(content().json("[{\"id\": 0, \"firstName\": \"John\", \"lastName\": \"Doe\", \"age\": 20},{\"id\": 0, \"firstName\": \"Tom\", \"lastName\": \"Hanks\", \"age\": 50}]"))
+                //instead of creating json like this, we can use toJsonString() code as in ticketing-project-rest-testing-review project ProjectControllerTest class
+
                 .andReturn();
     }
 }
